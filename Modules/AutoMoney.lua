@@ -59,6 +59,7 @@ local function Stop()
     end
 end
 
+print("CreateToggle chamado", Tab)
 -- Cria Toggle na UI
 function Collect1:CreateToggle(Tab)
     Tab:AddToggle({
