@@ -24,7 +24,7 @@ print("UI Zonix carregada e tabs criadas")
 local Modules = script:WaitForChild("Modules")
 
 local TsunamiEscape = require(Modules:WaitForChild("TsunamiEscape"))
-local FarmCollectMoney = require(Modules:WaitForChild("FarmCollectMoney"))
+local AutoMoney = require(Modules:WaitForChild("FarmCollectMoney"))
 
 print("CreateToggle chamado", Tab)
 TsunamiEscape:CreateToggle(Tabs.Main)
