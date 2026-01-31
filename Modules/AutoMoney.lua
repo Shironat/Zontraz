@@ -61,7 +61,7 @@ end
 
 -- Cria Toggle na UI
 function Collect1:CreateToggle(Tab)
-    Tab:Toggle({
+    Tab:AddToggle({
         Name = "Collect Money",
         CurrentValue = false,
         Flag = "CollectMoney",
