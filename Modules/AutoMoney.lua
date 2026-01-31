@@ -10,23 +10,17 @@ local HeartbeatConn
 local CHECK_INTERVAL = 0.5 -- pode ajustar
 local lastCheck = 0
 
--- Remote
-local PlotAction = ReplicatedStorage:WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RF/Plot.PlotAction")
-
--- Função que coleta todos os money spots
 local function CollectMoney()
-    -- Pega todas as bases do Workspace
     if not workspace:FindFirstChild("Bases") then return end
 
     for _, base in pairs(workspace.Bases:GetChildren()) do
-        local uuid = base.Name -- geralmente o nome da base é o uuid
+        local uuid = base.Name
         local args = {
             "Collect Money",
             string.format("{%s}", uuid),
-            "1",
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
         }
 
-        -- Invoke o remote
         local success, err = pcall(function()
             PlotAction:InvokeServer(unpack(args))
         end)
