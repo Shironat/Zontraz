@@ -61,7 +61,7 @@ end
 
 -- Cria Toggle na UI
 function Collect1:CreateToggle(Tab)
-    Farm:Toggle({
+    Tab:Toggle({
         Name = "Collect Money",
         CurrentValue = false,
         Flag = "CollectMoney",
