@@ -10,6 +10,15 @@ local HeartbeatConn
 local CHECK_INTERVAL = 0.5 -- pode ajustar
 local lastCheck = 0
 
+local PlotAction
+
+local function Init()
+    PlotAction = ReplicatedStorage
+        :WaitForChild("Packages", 5)
+        :WaitForChild("Net", 5)
+        :WaitForChild("RF/Plot.PlotAction", 5)
+end
+
 local function CollectMoney()
     if not workspace:FindFirstChild("Bases") then return end
 
@@ -61,14 +70,19 @@ function Collect1:CreateToggle(Tab)
         CurrentValue = false,
         Flag = "CollectMoney",
         Callback = function(Value)
-            Enabled = Value
-            if Value then
-                Start()
-            else
-                Stop()
+    Enabled = Value
+    if Value then
+        if not PlotAction then
+            Init()
+            if not PlotAction then
+                warn("PlotAction não encontrado")
+                return
             end
         end
-    })
+        Start()
+    else
+        Stop()
+    end
 end
 
 return Collect1
