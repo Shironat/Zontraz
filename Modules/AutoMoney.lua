@@ -76,4 +76,4 @@ function Collect1:CreateToggle(Tab)
     })
 end
 
-return FarmModule
+return Collect1
