@@ -28,4 +28,4 @@ local FarmCollectMoney = require(Modules:WaitForChild("FarmCollectMoney"))
 
 -- Cria toggles através dos módulos
 TsunamiEscape:CreateToggle(Tabs.Main)
-FarmCollectMoney:CreateToggle(Tabs.Farm)
+CollectMoney:CreateToggle(Tabs.Farm)
