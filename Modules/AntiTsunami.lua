@@ -130,7 +130,7 @@ end
 
 -- Cria Toggle na UI
 function TsunamiEscape:CreateToggle(Tab)
-    Tab:CreateToggle({
+    Home:Toggle({
         Name = "Auto Escape Tsunami",
         CurrentValue = false,
         Flag = "AutoEscapeTsunami",
