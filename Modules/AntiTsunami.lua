@@ -128,6 +128,7 @@ local function Stop()
     end
 end
 
+print("CreateToggle chamado", Tab)
 -- Cria Toggle na UI
 function TsunamiEscape:CreateToggle(Tab)
     Tab:AddToggle({
