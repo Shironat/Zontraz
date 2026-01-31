@@ -9,7 +9,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 -- Config
-local DANGER_DISTANCE = 80
+local DANGER_DISTANCE = 50
 local CHECK_INTERVAL = 0.1
 local TELEPORT_HEIGHT_OFFSET = 3
 local TWEEN_DURATION = 0.15
@@ -130,7 +130,7 @@ end
 
 -- Cria Toggle na UI
 function TsunamiEscape:CreateToggle(Tab)
-    Tab:Toggle({
+    Tab:AddToggle({
         Name = "Auto Escape Tsunami",
         CurrentValue = false,
         Flag = "AutoEscapeTsunami",
