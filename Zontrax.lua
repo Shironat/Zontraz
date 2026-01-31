@@ -1,31 +1,31 @@
 -- Main.lua (LocalScript)
 
-print("Main iniciou")
-
+-- Carrega a biblioteca Zonix
 local Zonix = loadstring(game:HttpGet("https://hub.zon.su/zonix-ui.lua"))()
-print("UI carregada")
 
-local Window = Zonix:CreateWindow({
-    Name = "Shiro Hub",
-    Size = UDim2.new(0, 500, 0, 400),
-    Theme = "Dark"
+-- Cria a janela principal
+local Window = Zonix:Window({
+    Name = "Shiro Hub"
 })
 
-print("Janela criada")
-
+-- Cria as Tabs
 local Tabs = {}
-Tabs.Main = Window:CreateTab("Main")
-Tabs.Farm = Window:CreateTab("Farm")
+Tabs.Main = Window:Tab({
+    Name = "Main"
+})
 
-print("Tabs criadas")
+Tabs.Farm = Window:Tab({
+    Name = "Farm"
+})
 
--- Ajuste o caminho se necessário
+print("UI Zonix carregada e tabs criadas")
+
+-- Carrega módulos
 local TsunamiEscape = require(script.TsunamiEscape)
 local FarmCollectMoney = require(script.FarmCollectMoney)
 
-print("Módulos carregados")
-
+-- Cria toggles através dos módulos
 TsunamiEscape:CreateToggle(Tabs.Main)
 FarmCollectMoney:CreateToggle(Tabs.Farm)
 
-print("Toggles criados")
+print("Toggles adicionados com sucesso")
