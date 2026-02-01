@@ -1,31 +1,35 @@
--- Main.lua (LocalScript)
+local HttpGet = game.HttpGet
+local player = game.Players.LocalPlayer
 
--- Carrega a biblioteca Zonix
-local Zonix = loadstring(game:HttpGet("https://hub.zon.su/zonix-ui.lua"))()
+-- loader genérico
+local function LoadModule(url)
+    return loadstring(game:HttpGet(url))()
+end
 
--- Cria a janela principal
-local Window = Zonix:Window({
-    Name = "Shiro Hub"
+-- estado global do toggle
+local AutoFarmState = { Enabled = false }
+
+-- carrega módulo
+local AutoFarm = LoadModule(
+    "https://raw.githubusercontent.com/ShiroNat/Zontraz/main/modules/AutoFarm.lua"
+)
+
+-- Zonix UI
+local Window = Zonix:CreateWindow({
+    Title = "Zontrax",
+    Center = true
 })
 
--- Cria as Tabs
-local Tabs = {}
-Tabs.Main = Window:Tab({
-    Name = "Main"
+local Tab = Window:AddTab("Farm")
+
+Tab:AddToggle({
+    Name = "Auto Farm",
+    Default = false,
+    Callback = function(value)
+        AutoFarmState.Enabled = value
+
+        if value then
+            AutoFarm(AutoFarmState)
+        end
+    end
 })
-
-Tabs.Farm = Window:Tab({
-    Name = "Farm"
-})
-
-print("UI Zonix carregada e tabs criadas")
-
--- Carrega módulos
-local Modules = script:WaitForChild("Modules")
-
-local TsunamiEscape = require(Modules:WaitForChild("TsunamiEscape"))
-local AutoMoney = require(Modules:WaitForChild("FarmCollectMoney"))
-
-print("CreateToggle chamado", Tab)
-TsunamiEscape:CreateToggle(Tabs.Main)
-AutoMoney:CreateToggle(Tabs.Farm)
