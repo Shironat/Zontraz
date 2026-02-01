@@ -20,7 +20,7 @@ local Window = Zonix:Window({
     Center = true
 })
 
-local Tab = Window:AddTab("Farm")
+local Tab = Window:Tab("Farm")
 
 Tab:AddToggle({
     Name = "Auto Dodge Tsunami",
