@@ -13,7 +13,7 @@ end
 local AutoDodgeState = { Enabled = false }
 
 local AutoDodge = LoadModule(
-    "https://raw.githubusercontent.com/Shironat/Zontraz/main/modules/AutoDodgeTsunami.lua"
+    "https://raw.githubusercontent.com/Shironat/Zontraz/refs/main/Modules/AutoDodgeTsunami.lua"
 )
 
 -- Zonix UI
