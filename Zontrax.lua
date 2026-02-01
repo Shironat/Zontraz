@@ -1,3 +1,5 @@
+local Zonix = loadstring(game:HttpGet("https://hub.zon.su/zonix-ui.lua"))()
+
 local HttpGet = game.HttpGet
 local player = game.Players.LocalPlayer
 
@@ -13,7 +15,7 @@ local AutoDodge = LoadModule(
 )
 
 -- Zonix UI
-local Window = Zonix:CreateWindow({
+local Window = Zonix:Window({
     Title = "Zontrax",
     Center = true
 })
