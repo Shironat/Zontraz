@@ -8,7 +8,7 @@ return function(state)
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
     local DANGER_DISTANCE = 150
-    local CHECK_INTERVAL = 0.1
+    local CHECK_INTERVAL = 0.01
     local TELEPORT_HEIGHT_OFFSET = 3
     local TWEEN_DURATION = 0.15
     local SAFE_ZONE_DISTANCE = 15
