@@ -11,7 +11,7 @@ local AutoFarmState = { Enabled = false }
 
 -- carrega módulo
 local AutoFarm = LoadModule(
-    "https://raw.githubusercontent.com/ShiroNat/Zontraz/main/modules/AutoFarm.lua"
+    "https://raw.githubusercontent.com/Shironat/Zontraz/main/modules/EvadeTsunami.lua"
 )
 
 -- Zonix UI
