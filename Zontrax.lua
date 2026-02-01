@@ -6,12 +6,14 @@ local function LoadModule(url)
     return loadstring(game:HttpGet(url))()
 end
 
--- estado global do toggle
-local AutoFarmState = { Enabled = false }
+local function LoadModule(url)
+    return loadstring(game:HttpGet(url))()
+end
 
--- carrega módulo
-local AutoFarm = LoadModule(
-    "https://raw.githubusercontent.com/Shironat/Zontraz/main/modules/EvadeTsunami.lua"
+local AutoDodgeState = { Enabled = false }
+
+local AutoDodge = LoadModule(
+    "https://raw.githubusercontent.com/SEU_USUARIO/REPO/main/modules/AutoDodgeTsunami.lua"
 )
 
 -- Zonix UI
@@ -23,13 +25,12 @@ local Window = Zonix:CreateWindow({
 local Tab = Window:AddTab("Farm")
 
 Tab:AddToggle({
-    Name = "Auto Farm",
+    Name = "Auto Dodge Tsunami",
     Default = false,
     Callback = function(value)
-        AutoFarmState.Enabled = value
-
+        AutoDodgeState.Enabled = value
         if value then
-            AutoFarm(AutoFarmState)
+            AutoDodge(AutoDodgeState)
         end
     end
 })
