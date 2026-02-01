@@ -6,14 +6,10 @@ local function LoadModule(url)
     return loadstring(game:HttpGet(url))()
 end
 
-local function LoadModule(url)
-    return loadstring(game:HttpGet(url))()
-end
-
 local AutoDodgeState = { Enabled = false }
 
 local AutoDodge = LoadModule(
-    "https://raw.githubusercontent.com/Shironat/Zontraz/refs/main/Modules/AutoDodgeTsunami.lua"
+    "https://raw.githubusercontent.com/Shironat/Zontraz/main/Modules/AutoDodgeTsunami.lua"
 )
 
 -- Zonix UI
