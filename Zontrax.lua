@@ -11,12 +11,14 @@ local Window = Rayfield:CreateWindow({
 print("Carregando Tabs...")
 local Tabs = {}
 
-Tabs.Tsunami  = Window:Tab("Tsunami")
+Tabs.Autofarm  = Window:Tab("Auto farm")
+Tabs.Teleport  = Window:Tab("Teleport")
 
-assert(Tabs.Tsunami, "Tab Tsunami não existe")
-print("Carregadando módulos...")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Autofarm.lua"))()(Tabs.Autofarm)
+print("Autofarm: 200[OK]")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/ShiroHub-v2/main/Tabs/Tsunami.lua"))()(Tabs.Tsunami)
-print("TSUNAMI: 200[OK]")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Teleport.lua"))()(Tabs.Teleport)
+print("Teleport: 200[OK]")
+
 
 print("ShiroHub carregado!")
