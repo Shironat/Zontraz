@@ -1,6 +1,7 @@
 return function(Tab)
     Tab:Button({
         Name = "Teleport Base",
-        Callback = Logic.ResetBase
+        Callback = function()
+            print("Teleport Function")
     })
 end
