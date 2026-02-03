@@ -1,10 +1,12 @@
 print("Carregando Escape a Tsunami...")
-local Zonix = loadstring(game:HttpGet("https://hub.zon.su/zonix-ui.lua"))()
+local Zonix = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zontrz/zonix-ui/refs/heads/main/main.lua"))()
 print("Zonix: 200[OK]")
 
 local Window = Zonix:Window({
      Name = "Escape Tsunami for Brainrot"
-     Icons = { Type: "emoji", Value: "mil" })}
+     Icons = Type: "emoji",
+     Value: "🏄"
+)}
 
 print("Carregando Tabs...")
 local Tabs = {}
