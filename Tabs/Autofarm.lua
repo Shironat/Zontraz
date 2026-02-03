@@ -1,7 +1,5 @@
 return function(Tab)
-    local Logic = loadstring(
-        game:HttpGet("https://raw.githubusercontent.com/Shironat/ShiroHub-v2/main/Logic/FarmLogic.lua")
-    )()
+    local Logic = loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Logic/FarmLogic.lua"))()
 
     local brainrots = {}
     local selectedSlot = nil
@@ -16,7 +14,7 @@ return function(Tab)
         end
 
         if not DropdownRef then
-            DropdownRef = Tab:CreateDropdown({
+            DropdownRef = Tab:Dropdown({
                 Name = "Selecionar Brainrot",
                 Options = options,
                 Callback = function(selected)
@@ -45,28 +43,28 @@ return function(Tab)
         end
 
         if DropdownRef.Refresh then
-            DropdownRef:Refresh(options)
+            DropdownRef:Update(options)
             selectedSlot = nil
         else
             warn("Dropdown não suporta Refresh()")
         end
     end
 
-    Tab:CreateSection("Resets")
+    Tab:Section("Resets")
 
-    Tab:CreateButton({
+    Tab:Button({
         Name = "Reset Base",
         Callback = Logic.ResetBase
     })
 
-    Tab:CreateButton({
+    Tab:Button({
         Name = "Atualizar Brainrots",
         Callback = LoadBrainrots
     })
 
-    Tab:CreateSection("AutoFarms")
+    Tab:Section("AutoFarms")
 
-    Tab:CreateToggle({
+    Tab:Toggle({
         Name = "Auto Collect",
         Callback = function(state)
             Logic.ToggleMoney(state)
@@ -77,7 +75,7 @@ return function(Tab)
         end
     })
 
-    Tab:CreateToggle({  
+    Tab:Toggle({  
         Name = "Auto Event Coins",  
         Callback = function(enabled)  
            pcall(function()  
@@ -86,17 +84,17 @@ return function(Tab)
         end,  
     })  
 
-    Tab:CreateToggle({
+    Tab:Toggle({
         Name = "Auto Upgrade Speed",
         Callback = Logic.ToggleUpgradeSpeed
     })
 
-    Tab:CreateToggle({
+    Tab:Toggle({
         Name = "Auto Rebirth",
         Callback = Logic.ToggleRebirth
     })
 
-    Tab:CreateToggle({
+    Tab:Toggle({
         Name = "Auto Upgrade Brainrot",
         Callback = function(state)
             if not state then
