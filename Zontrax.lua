@@ -4,8 +4,10 @@ print("Zonix: 200[OK]")
 
 local Window = Zonix:Window({
      Name = "Escape Tsunami for Brainrot"
-     Icons = Type: "emoji",
-     Value: "🏄"
+     Icons = {
+          Type: "emoji",
+          Value: "🏄" 
+     }
 )}
 
 print("Carregando Tabs...")
