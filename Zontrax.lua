@@ -11,18 +11,10 @@ local Window = Rayfield:CreateWindow({
 print("Carregando Tabs...")
 local Tabs = {}
 
-Tabs.Exploits = Window:Tab("Exploits")
-Tabs.Inject   = Window:Tab("Injection")
 Tabs.Tsunami  = Window:Tab("Tsunami")
 
 assert(Tabs.Tsunami, "Tab Tsunami não existe")
 print("Carregadando módulos...")
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/ShiroHub-v2/main/Tabs/Exploits.lua"))()(Tabs.Exploits)
-print("EXPLOITS: 200[OK]")
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/ShiroHub-v2/main/Tabs/Inject.lua"))()(Tabs.Inject)
-print("INJECT: 200[OK]")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/ShiroHub-v2/main/Tabs/Tsunami.lua"))()(Tabs.Tsunami)
 print("TSUNAMI: 200[OK]")
