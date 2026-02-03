@@ -3,3 +3,4 @@ return function(Tab)
         Name = "Reset Base",
         Callback = Logic.ResetBase
     })
+end
