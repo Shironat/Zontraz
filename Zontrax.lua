@@ -16,8 +16,8 @@ local Window = Zonix:Window({
 print("Carregando Tabs...")
 local Tabs = {}
 
-Tabs.Autofarm  = Window:Tab("Auto farm")
-Tabs.Teleport  = Window:Tab("Teleport")
+Tabs.Autofarm  = Window:AutoFarm("Auto farm")
+Tabs.Teleport  = Window:Teleport("Teleport")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Autofarm.lua"))()(Tabs.Autofarm)
 print("Autofarm: 200[OK]")
