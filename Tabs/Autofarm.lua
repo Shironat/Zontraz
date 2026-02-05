@@ -50,21 +50,21 @@ return function(Tab)
         end
     end
 
-    AutoFarm:Section("Resets")
+    Tab:Section("Resets")
 
     Tab:Button({
         Name = "Reset Base",
         Callback = Logic.ResetBase
     })
 
-    AutoFarm:Button({
+    Tab:Button({
         Name = "Atualizar Brainrots",
         Callback = LoadBrainrots
     })
 
     AutoFarm:Section("AutoFarms")
 
-    AutoFarm:Toggle({
+    Tab:Toggle({
         Name = "Auto Collect",
         Callback = function(state)
             Logic.ToggleMoney(state)
@@ -75,7 +75,7 @@ return function(Tab)
         end
     })
 
-    AutoFarm:Toggle({  
+    Tab:Toggle({  
         Name = "Auto Event Coins",  
         Callback = function(enabled)  
            pcall(function()  
@@ -84,17 +84,17 @@ return function(Tab)
         end,  
     })  
 
-    AutoFarm:Toggle({
+    Tab:Toggle({
         Name = "Auto Upgrade Speed",
         Callback = Logic.ToggleUpgradeSpeed
     })
 
-    AutoFarm:Toggle({
+    Tab:Toggle({
         Name = "Auto Rebirth",
         Callback = Logic.ToggleRebirth
     })
 
-    AutoFarm:Toggle({
+    Tab:Toggle({
         Name = "Auto Upgrade Brainrot",
         Callback = function(state)
             if not state then
