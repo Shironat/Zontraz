@@ -81,10 +81,10 @@ local function ResolverBase()
     return false
 end
 
-TsunamiLogic.ResolverBase = ResolverBase -- FIX (export)
+TsunamiLogic.ResolverBase = ResolverBase
 
 RunService.Heartbeat:Connect(function(dt)
-    if not MoneyEnabled then return end -- FIX
+    if not MoneyEnabled then return end
     if not MinhaBase then return end
 
     acumulador += dt
