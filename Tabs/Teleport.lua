@@ -1,7 +1,8 @@
 return function(Tab)
-    Tab:Button({
-        Name = "Teleport Base",
-        Callback = function()
-            print("Teleport Function")
-    })
-end
+
+    Tab:Toggle({
+    Name = "Auto Obby(money Event)",
+    Callback = function(state)
+        TeleportLogic.Enabled = state
+    end
+})
