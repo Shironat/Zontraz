@@ -16,7 +16,7 @@ local Remote = ReplicatedStorage
 
 local Bases = workspace:WaitForChild("Bases")
 
-local TsunamiLogic = {}
+local FarmLogic = {}
 
 local MoneyEnabled = false
 local MinhaBase = nil
@@ -245,4 +245,4 @@ task.spawn(function()
     end
 end)
 
-return TsunamiLogic
+return FarmLogic
