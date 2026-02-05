@@ -94,6 +94,8 @@ return function(Tab)
         Callback = Logic.ToggleRebirth
     })
 
+    Tab:Section("Brainrots")
+
     Tab:Toggle({
         Name = "Auto Upgrade Brainrot",
         Callback = function(state)
