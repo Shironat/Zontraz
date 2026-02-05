@@ -16,13 +16,13 @@ local Window = Zonix:Window({
 print("Carregando Tabs...")
 local Tabs = {}
 
-Tabs.Autofarm  = Window:AutoFarm("Auto farm")
-Tabs.Teleport  = Window:Teleport("Teleport")
+Tab.Autofarm  = Window:AutoFarm("Auto farm")
+Tab.Teleport  = Window:Teleport("Teleport")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Autofarm.lua"))()(Tabs.Autofarm)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Autofarm.lua"))()(Tab.Autofarm)
 print("Autofarm: 200[OK]")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Teleport.lua"))()(Tabs.Teleport)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Shironat/Zontraz/main/Tabs/Teleport.lua"))()(Tab.Teleport)
 print("Teleport: 200[OK]")
 
 
