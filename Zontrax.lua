@@ -14,7 +14,7 @@ local Window = Zonix:Window({
     CompactMode = false})
 
 print("Carregando Tabs...")
-local Tabs = {}
+local Tab = {}
 
 Tab.Autofarm  = Window:AutoFarm("Auto farm")
 Tab.Teleport  = Window:Teleport("Teleport")
