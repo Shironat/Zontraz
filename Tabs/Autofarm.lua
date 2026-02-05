@@ -62,7 +62,7 @@ return function(Tab)
         Callback = LoadBrainrots
     })
 
-    AutoFarm:Section("AutoFarms")
+    Tab:Section("AutoFarms")
 
     Tab:Toggle({
         Name = "Auto Collect",
