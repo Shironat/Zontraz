@@ -81,7 +81,7 @@ local function ResolverBase()
     return false
 end
 
-TsunamiLogic.ResolverBase = ResolverBase
+FarmLogic.ResolverBase = ResolverBase
 
 RunService.Heartbeat:Connect(function(dt)
     if not MoneyEnabled then return end
@@ -109,7 +109,7 @@ RunService.Heartbeat:Connect(function(dt)
     end
 end)
 
-function TsunamiLogic.ToggleMoney(state)
+function FarmLogic.ToggleMoney(state)
     MoneyEnabled = state
 
     if state and not MinhaBase then
@@ -117,7 +117,7 @@ function TsunamiLogic.ToggleMoney(state)
     end
 end
 
-function TsunamiLogic.ResetBase()
+function FarmLogic.ResetBase()
     MinhaBase = nil
     ResolverBase()
 end
@@ -141,12 +141,12 @@ end
 RunService.RenderStepped:Connect(function(dt)
     if not EventCoinEnabled then return end -- FIX
 
-    TsunamiLogic._lastCheck = (TsunamiLogic._lastCheck or 0) + dt
-    if TsunamiLogic._lastCheck < CHECK_INTERVAL then return end
-    TsunamiLogic._lastCheck = 0
+    FarmLogic._lastCheck = (FarmLogic._lastCheck or 0) + dt
+    if FarmLogic._lastCheck < CHECK_INTERVAL then return end
+    FarmLogic._lastCheck = 0
 end)
 
-function TsunamiLogic.GetBrainrots()
+function FarmLogic.GetBrainrots()
     local result = {}
 
     if not MinhaBase then
@@ -176,7 +176,7 @@ function TsunamiLogic.GetBrainrots()
     return result
 end
 
-function TsunamiLogic.ToggleUpgrade(state, slot)
+function FarmLogic.ToggleUpgrade(state, slot)
     AtivoUpgrade = state
 
     if state then
@@ -187,7 +187,7 @@ function TsunamiLogic.ToggleUpgrade(state, slot)
     end
 end
 
-function TsunamiLogic.UpgradeBrainrot(slotNumber)
+function FarmLogic.UpgradeBrainrot(slotNumber)
     if not MinhaBase then
         if not ResolverBase() then return end
     end
@@ -204,18 +204,18 @@ end
 task.spawn(function()
     while true do
         if AtivoUpgrade and UpgradeSlot then
-            TsunamiLogic.UpgradeBrainrot(UpgradeSlot)
+            FarmLogic.UpgradeBrainrot(UpgradeSlot)
         end
         task.wait(UpgradeInterval)
     end
 end)
 
-function TsunamiLogic.ToggleUpgrade(state, slot)
+function FarmLogic.ToggleUpgrade(state, slot)
     AtivoUpgrade = state
     UpgradeSlot = slot
 end
 
-function TsunamiLogic.ToggleUpgradeSpeed(state)
+function FarmLogic.ToggleUpgradeSpeed(state)
     UpgradeSpeedEnabled = state
 end
 
@@ -230,7 +230,7 @@ task.spawn(function()
     end
 end)
 
-function TsunamiLogic.ToggleRebirth(state)
+function FarmLogic.ToggleRebirth(state)
     RebirthEnabled = state
 end
 
