@@ -81,7 +81,9 @@ local function ResolverBase()
     return false
 end
 
-FarmLogic.ResolverBase = ResolverBase
+warn("[FarmLogic] antes do ResolverBase:",
+FarmLogic.ResolverBase = ResolverBase()
+warn("[FarmLogic] depois do ResolverBase:",
 
 RunService.Heartbeat:Connect(function(dt)
     if not MoneyEnabled then return end
