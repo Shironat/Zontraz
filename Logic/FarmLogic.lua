@@ -210,10 +210,6 @@ task.spawn(function()
     end
 end)
 
-function FarmLogic.ToggleUpgrade(state, slot)
-    AtivoUpgrade = state
-    UpgradeSlot = slot
-end
 
 function FarmLogic.ToggleUpgradeSpeed(state)
     UpgradeSpeedEnabled = state
