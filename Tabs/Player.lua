@@ -1,5 +1,5 @@
 return function(Tab)
-   Tab:Toggle({
+   Tab:Button({
        Name = "Player",
        Callback function()
            print("Hello")
