@@ -54,7 +54,9 @@ return function(Tab)
 
     Tab:Button({
         Name = "Reset Base",
-        Callback = Logic.ResetBase
+        Callback = function()
+            Logic.ResetBase
+        end
     })
 
     Tab:Button({
@@ -86,12 +88,16 @@ return function(Tab)
 
     Tab:Toggle({
         Name = "Auto Upgrade Speed",
-        Callback = Logic.ToggleUpgradeSpeed
+        Callback = function(state)
+            Logic.ToggleUpgradeSpeed(state)
+        end
     })
 
     Tab:Toggle({
         Name = "Auto Rebirth",
-        Callback = Logic.ToggleRebirth
+        Callback = function(state)
+            Logic.ToggleRebirth(state)
+        end
     })
 
     Tab:Section("Brainrots")
