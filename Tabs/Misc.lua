@@ -3,3 +3,5 @@ return function(Tab)
        Name = "Misc",
        Callback function()
            print("Hello")
+       end
+)}
