@@ -82,7 +82,7 @@ local function ResolverBase()
 end
 
 warn("[FarmLogic] antes do ResolverBase:", FarmLogic)
-FarmLogic.ResolverBase = ResolverBase()
+FarmLogic.ResolverBase = ResolverBase
 warn("[FarmLogic] depois do ResolverBase")
 
 RunService.Heartbeat:Connect(function(dt)
