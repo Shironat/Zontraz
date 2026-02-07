@@ -55,13 +55,13 @@ return function(Tab)
     Tab:Button({
         Name = "Reset Base",
         Callback = function()
-            Logic.ResetBase
+            Logic.ResetBase()
         end
     })
 
     Tab:Button({
         Name = "Atualizar Brainrots",
-        Callback = LoadBrainrots
+        Callback = Logic.LoadBrainrots()
     })
 
     Tab:Section("AutoFarms")
