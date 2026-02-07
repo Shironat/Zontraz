@@ -8,3 +8,4 @@ return function(Tab)
         TeleportLogic.Enabled = state
     end
 })
+end
